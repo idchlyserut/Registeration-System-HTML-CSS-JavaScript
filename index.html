@@ -1,60 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Welcome to InteRS</title>
+  <meta charset="utf-8">
+  <title>Internship Application</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
 
-    <!-- Font Icon -->
-    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
 
-    <!-- Main css -->
-    <link rel="stylesheet" href="css/style.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,600,700,700i|Montserrat:300,400,500,600,700" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+   <!-- Font Icon -->
+   <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+
 </head>
+
 <body>
+  <!--==========================
+  Header
+  ============================-->
+  <header id="header">
 
-    <div class="main">
+   
 
+      
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <a href="#header" class="scrollto"><img src="images/logo.png" alt=""></a> 
+      
 
-        <!-- Sign in  Form -->
+      <nav class="main-nav float-right d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="index.html">Submission Page</a></li>
+          <li><a href="info.html">Contact Us</a></li>
+          <li><a href="login.html">Login</a></li>
+     
+        </ul>
+      </nav>
+      
+  </header>
+  
+  <!-- #header -->
+
+  <main id="main">
+
+    <!--==========================
+      About Us Section
+    ============================-->
+    <section id="about">
+
+      
+        <!-- LI Application Form-->
         <section class="sign-in">
             <div class="container">
+			  <h2 class="form-title" style="padding-left:30%;">LI Application Form</h2>
                 <div class="signin-content">
+				
+				<!---first Form section--->
                     <div class="signin-image">
-					 
-                        <figure><img src="images/character 7.svg" alt="sing up image"></figure>
-                        <a href="signup.html" class="signup-image-link">Create an account</a>
-                    </div>
+                       
+					        	<!---header for form-->
+                    <h5 class="wrapping-background"> Basic Information</h5>
+                    <br>	
+                    
 
-                    <div class="signin-form">
-                        <h2 class="form-title">Login</h2>
-                        <form method="POST" class="register-form" id="login-form">
+                          <form method="POST" class="register-form" id="register-form">
+                          <div class="form-group">
+                             <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                             <input type="text" name="name" id="name" placeholder="Your Fullname"/>
+                              </div>
+
+                                
+                                <div class="form-group">
+                                     <label for="age"><i class="zmdi zmdi-lock-outline"></i></label>
+                                       <input type="number" name="age" id="age" placeholder="Age"/>
+                                       </div>
+               
+                                  <div class="form-group">
+                                       <label for="course"><i class="zmdi zmdi-lock-outline"></i></label>
+                                         <input type="text" name="course" id="course" placeholder="Course"/>
+                                      </div>
+
+                                  <div class="form-group">
+                                       <label for="university"><i class="zmdi zmdi-lock-outline"></i></label>
+                                  <input type="text" name="uni" id="uni" placeholder="University"/>
+                                   </div>
+
+                                       <div class="form-group">
+                                       <label for="period"><i class="zmdi zmdi-lock-outline"></i></label>
+                                       <input type="text" name="period" id="period" placeholder="Internship Period"/>
+                                     </div>
+                                    <div class="form-group">
+                                     <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
+                                          <input type="date" name="dob" id="dob" placeholder="Date of Birth"/>
+                                             </div>
+  
+                                      <div class="form-group">
+                                      <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
+                                      <input type="number" name="mobile" id="mobile" placeholder="Mobile Number"/>
+                                              </div>
+                                            </div>
+                                            
+                                              	<!--end first form-->
+						
+                                                      
+				            
+
+                                                     
+                  <div class="signin-form">
+                    <!---header for form-->
+                      <h5 class="wrapping-background"> Important Documents </h5>
+					              <br>
+					                <!-- second Form Section--->
+					                  <div class="wrapping-background">
+                
+                            <div class="form-group"></div>
+                               <p for="file">1. Academic Application Letter</hp>
+                                <div class="button-wrapper">
+								            	<span class="label" >Upload File</span>
+								          		<input type="file" name="upload" id="upload" class="upload-box" placeholder="Upload File">
+                                </div>
+                             
                             <div class="form-group">
-                                <label for="your_email"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                <input type="text" name="your_email" id="your_email" placeholder="Email"/>
-                            </div>
+                                <p for="resume">2. Resume</p>
+                                  <div class="button-wrapper">
+									                <span class="label" >Upload File</span>
+								              		<input type="file" name="upload" id="upload" class="upload-box" placeholder="Upload File">
+						                  	</div>
+				                          </div>
                             <div class="form-group">
-                                <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
-                                <input type="password" name="your_pass" id="your_pass" placeholder="Password"/>
-                            </div>
+                                <p for="exam">3. Latest Exam Transcript</p>
+                                   <div class="button-wrapper">
+									            <span class="label" >Upload File</span>
+									        	<input type="file" name="upload" id="upload" class="upload-box" placeholder="Upload File">
+					                		</div>
+					                  		</div>
+							
                             <div class="form-group">
-                                <input type="checkbox" name="remember-me" id="remember-me" class="agree-term" />
-                                <label for="remember-me" class="label-agree-term"><span><span></span></span>Remember me</label>
-                            </div>
+                               <p for="acceptance_form">4. Acceptance Form by Faculty</p>
+								
+                                   <div class="button-wrapper">
+								                    	<span class="label" >Upload File</span>
+							              			<input type="file" name="upload" id="upload" class="upload-box" placeholder="Upload File">
+							                 </div>
+						                	</div>
+								
                             <div class="form-group form-button">
-                                <input type="submit" name="signin" id="signin" class="form-submit" value="Log in"/>
+                                <input type="submit" name="signup" id="signup" class="form-submit" value="Submit"/>
                             </div>
+        
                         </form>
+                      </div>
                     </div>
+                      </main>
+						<!--end form-->
+						
+                    </div>
+					
+					
                 </div>
             </div>
         </section>
 
     </div>
 
-    <!-- JS -->
-    <script src="vendor/jquery/jquery.min.js"></script>
+    </section>
+	
+
+
+  <!-- JavaScript Libraries -->
+
+   <script src="vendor/jquery/jquery.min.js"></script>
     <script src="js/main.js"></script>
-</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+ 
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+  
+
+</body>
 </html>
+  
