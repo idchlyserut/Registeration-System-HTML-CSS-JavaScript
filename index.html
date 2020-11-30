@@ -71,9 +71,10 @@
 					        	<!---header for form-->
                     <h5 class="wrapping-background"> Basic Information</h5>
                     <br>	
-                    
-
-                          <form method="POST" class="register-form" id="register-form" action="">
+								<!---header end-->
+								
+								<!---Form start-->
+                          <form method="POST" class="register-form" id="register-form" action="php/filesLogic.php" enctype="multipart/form-data">
                           <div class="form-group">
                              <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
                              <input type="text" name="name" id="name" placeholder="Your Fullname"/>
@@ -95,58 +96,39 @@
                                        <input type="text" name="period" id="period" placeholder="Internship Period"/>
                                      </div>
 									 </div>
+									 
                                               	<!--end first form-->
 						      
 							<div class="signin-form">
-									<!---header for form-->
+							
+									<!---header second form-->
 									<h5 class="wrapping-background"> Important Documents </h5>
 										<br>
 					                <!-- second Form Section--->
 					                  <div class="wrapping-background">
                 
-                            <div class="form-group"></div>
-                               <p for="file">1. Academic Application Letter</hp>
-                                <div class="button-wrapper">
-								            	<span class="label" >Upload File</span>
-								          		<input type="file" name="upload" id="upload" class="upload-box" placeholder="Upload File">
-                                </div>
-                             
-                            <div class="form-group">
-                                <p for="resume">2. Resume</p>
-                                  <div class="button-wrapper">
-									                <span class="label" >Upload File</span>
-								              		<input type="file" name="upload" id="upload" class="upload-box" placeholder="Upload File">
-						                  	</div>
-				                          </div>
-                            <div class="form-group">
-                                <p for="exam">3. Latest Exam Transcript</p>
-                                   <div class="button-wrapper">
-									            <span class="label" >Upload File</span>
-									        	<input type="file" name="upload" id="upload" class="upload-box" placeholder="Upload File">
-					                		</div>
-					                  		</div>
-							
-                            <div class="form-group">
-                               <p for="acceptance_form">4. Acceptance Form by Faculty</p>
+								<div class="form-group"></div>
+									<p for="file">Please upload these files: </p><br>
+									<p><b> 1. Academic Application Letter</p><br>
+									<p>2. Resume</p><br>
+									<p>3. Latest Exam Transcript</p><br>
+								    <p>4. Acceptance Form by Faculty</p><br></b>
+									<p>Put documents in a folder and compress it into a .zip file </p> <br>
+									
+                                <div class="form-group form-button">
+								            
+								          		<input type="file" name="myfile">
+									</div>
+									</div>
+
+									<div class="form-group form-button">
+									<input type="submit" name="submit" id="submit" class="form-submit" value="Submit"/>
 								
-                                   <div class="button-wrapper">
-								                    	<span class="label" >Upload File</span>
-							              			<input type="file" name="upload" id="upload" class="upload-box" placeholder="Upload File">
-							                 </div>
-						                	</div>
-								
-                           
+								</div>
 							</div>
-							 <div class="form-group form-button">
-                                <input type="submit" name="submit" id="submit" class="form-submit" value="Submit"/>
-                            </div>
-							 </div>
                         </form>
-                    
-                   
                       </main>
-						<!--end form-->
-						
+						<!--end form-->	
                     </div>
 					
 					

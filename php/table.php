@@ -20,15 +20,15 @@ email VARCHAR(30) NOT NULL,
 course VARCHAR (100) NOT NULL,
 uni VARCHAR (100) NOT NULL,
 period VARCHAR (30) NOT NULL,
-filename VARCHAR(255), NOT NULL,
-filesize INTEGER NOT NULL,
-downloads 
+filename VARCHAR(255) NOT NULL,
+filesize int NOT NULL,
+downloads binary,
 PRIMARY KEY (id),
 UNIQUE KEY email (email)
 )";
 
 if (mysqli_query ($conn, $sql)) {
-	echo "Table users created successfully!";
+	echo "Table application created successfully!";
 	}
 else {
 	echo "Error creating table: " . mysqli_error($conn);
