@@ -13,17 +13,16 @@ if (!$conn){
 	}
 	
 //sql to create table
-$sql = "CREATE TABLE users (
+$sql = "CREATE TABLE application (
 id int(11) unsigned NOT NULL AUTO_INCREMENT,
 name VARCHAR(100) NOT NULL,
-age  INTEGER NOT NULL,
-course VARCHAR (200) NOT NULL,
-uni VARCHAR (200) NOT NULL,
-period VARCHAR (10) NOT NULL,
-dob DATE NOT NULL,
-mobile INTEGER NOT NULL,
 email VARCHAR(30) NOT NULL, 
-password VARCHAR(16) NOT NULL,
+course VARCHAR (100) NOT NULL,
+uni VARCHAR (100) NOT NULL,
+period VARCHAR (30) NOT NULL,
+filename VARCHAR(255), NOT NULL,
+filesize INTEGER NOT NULL,
+downloads 
 PRIMARY KEY (id),
 UNIQUE KEY email (email)
 )";

@@ -285,7 +285,7 @@ figure {
   background: #6dabe4;
   color: #fff;
   border-bottom: none;
-  width: auto;
+  width: 100%;
   padding: 15px 39px;
   border-radius: 5px;
   -moz-border-radius: 5px;
