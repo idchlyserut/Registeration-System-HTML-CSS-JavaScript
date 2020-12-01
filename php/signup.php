@@ -58,7 +58,7 @@ if (isset($_POST['reg_user'])) {
   	mysqli_query($conn, $query);
   	$_SESSION['email'] = $email;
   	$_SESSION['success'] = "You are now logged in";
-  	header('location: ../index.html');
+  	header('location: ../main.html');
   }
 }
 

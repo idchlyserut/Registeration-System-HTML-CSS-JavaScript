@@ -14,8 +14,8 @@ if (!$conn){
 	}
 	
 
-$sql = "INSERT INTO users (name,email, password)
-VALUES ('idiey','idcomel123@gmail.com', 'password123');";
+$sql = "INSERT INTO admins (email, password)
+VALUES ('idcomel123@gmail.com', 'password123');";
 
 
 
