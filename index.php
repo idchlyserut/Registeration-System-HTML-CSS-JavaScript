@@ -1,32 +1,3 @@
-<?php
-   include("connection.php");
-   session_start();
-   
-   if($_SERVER["REQUEST_METHOD"] == "POST") {
-      // username and password sent from form 
-      
-      $myemail = mysqli_real_escape_string($conn,$_POST['email']);
-      $mypassword = mysqli_real_escape_string($conn,$_POST['password']); 
-      
-      $sql = "SELECT id FROM users WHERE email = '$myemail' and password = '$mypassword'";
-      $result = mysqli_query($conn,$sql);
-      $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-     // $active = $row['active'];
-      
-      $count = mysqli_num_rows($result);
-      
-      // If result matched $myemail and $mypassword, table row must be 1 row
-		
-      if($count == 1) {
-        
-         $_SESSION['login_user'] = $myemail;
-         
-         header("location: welcome.php");
-      }else {
-         $error = "Your Login Name or Password is invalid";
-      }
-   }
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -62,17 +33,17 @@
                         <form method="POST" class="register-form" id="login-form" action="php/login.php">
                             <div class="form-group">
                                 <label for="your_email"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                <input type="email" name="email" id="email" placeholder="Email"/>
+                                <input type="email" name="email"  placeholder="Email" required />
                             </div>
                             <div class="form-group">
                                 <label for="password"><i class="zmdi zmdi-lock"></i></label>
-                                <input type="password" name="password" id="password" placeholder="Password"/>
+                                <input type="password" name="password"  placeholder="Password" required />
                             </div>
                             <div class="form-group form-button">
                                 <input type="submit" name="submit" id="signin" class="form-submit" value="submit"/>
                             </div>
-							 <a href="signup.html" class="signup-image-link">Create an account</a>
-							  <a href="login_admin.html" class="signup-image-link">Admin? click here.</a>
+							 <a href="signup.php" class="signup-image-link">Create an account</a>
+							  <a href="login_admin.php" class="signup-image-link">Admin? click here.</a>
 							  
                         </form>
                     </div>

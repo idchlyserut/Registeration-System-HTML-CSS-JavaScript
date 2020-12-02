@@ -21,7 +21,7 @@
         
          $_SESSION['login_user'] = $myemail;
          
-         header("location: ../admin.html");
+         header("location: ../admin.php");
       }else {
          echo "Your Login Name or Password is invalid";
 		 

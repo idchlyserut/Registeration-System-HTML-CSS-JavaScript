@@ -42,8 +42,8 @@
 
       <nav class="main-nav float-right d-none d-lg-block">
         <ul>
-            <li><a href="main.html">Submission Page</a></li>
-            <li class="active"><a href="Info.html">Contact Us</a></li>
+            <li><a href="main.php">Submission Page</a></li>
+            <li class="active"><a href="Info.php">Contact Us</a></li>
             <li><a href="php/logout.php">Log Out</a></li>
      
         </ul>

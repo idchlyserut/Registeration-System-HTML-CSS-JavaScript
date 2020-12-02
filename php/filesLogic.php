@@ -2,7 +2,7 @@
 // connect to the database
 $conn = mysqli_connect('localhost', 'root', '', 'systemDB');
 
-$sql = "SELECT * FROM application";
+$sql = "SELECT * FROM files";
 $result = mysqli_query($conn, $sql);
 
 $files = mysqli_fetch_all($result, MYSQLI_ASSOC);
@@ -31,7 +31,7 @@ if (isset($_POST['submit'])) { // if save button on the form is clicked
     } else {
         // move the uploaded (temporary) file to the specified destination
         if (move_uploaded_file($file, $destination)) {
-            $sql = "INSERT INTO application (filename, filesize, downloads) VALUES ('$filename', $size, 0)";
+            $sql = "INSERT INTO files (name, size, downloads) VALUES ('$filename', $size, 0)";
             if (mysqli_query($conn, $sql)) {
                 echo "File uploaded successfully";
             }
@@ -46,7 +46,7 @@ if (isset($_GET['file_id'])) {
     $id = $_GET['file_id'];
 
     // fetch file to download from database
-    $sql = "SELECT * FROM application WHERE id=$id";
+    $sql = "SELECT * FROM files WHERE id=$id";
     $result = mysqli_query($conn, $sql);
 
     $file = mysqli_fetch_assoc($result);
@@ -64,7 +64,7 @@ if (isset($_GET['file_id'])) {
 
         // Now update downloads count
         $newCount = $file['downloads'] + 1;
-        $updateQuery = "UPDATE application SET downloads=$newCount WHERE id=$id";
+        $updateQuery = "UPDATE files SET downloads=$newCount WHERE id=$id";
         mysqli_query($conn, $updateQuery);
         exit;
     }

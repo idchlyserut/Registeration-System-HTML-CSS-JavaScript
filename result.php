@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Applicants</title>
+  <title>Result</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -42,9 +42,9 @@
 
       <nav class="main-nav float-right d-none d-lg-block">
         <ul>
-          <li class="active"><a href="admin.html">Applicants List</a></li>
-          <li><a href="result.html">Result List</a></li>
-            <li><a href="php/logout.php">Log Out</a></li>
+          <li ><a href="admin.php">Applicants List</a></li>
+          <li class="active"><a href="result.php">Result List</a></li>
+          <li><a href="php/logout.php">Log Out</a></li>
      
         </ul>
       </nav>
@@ -76,42 +76,69 @@
 
                     <div class="wrapping-background">
 						<!---header for form-->
-                        <h3> Submitted Form</h3>
-                        <p>This is a table of submitted application for the internship position at JKPNS</p>
+                        <h3> Result List</h3>
+                        <p>Result complete lists of approved and declined applications.</p>
 						<br>
 						<!-- Form Section--->
 						
-                        <form method="POST" action="php/downloads.php" class="register-form" id="login-form">
+                        <form method="POST" action="/action_page.php" class="register-form" id="login-form">
                             <table class="table">
                                 <thead class="thead-dark">
                                   <tr>
-                                    <th scope="col">ID</th>
+                                    <th scope="col">#</th>
                                     <th scope="col">Name</th>
-                                    <th scope="col">Applicant Basic Info</th>
-                                    <th scope="col">Download Documents</th>
-                                    <th scope="col">Action</th>
+                                    <th scope="col">Applicant Info</th>
+                                    <th scope="col">Status</th>
                                   </tr>
                                 </thead>
                                 <tbody>
                                   <tr>
                                     <th scope="row">1</th>
                                     <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>
-                                        <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Download</a>
+                                    <td>Age: 21 <br>
+                                        University: UM <br>
+                                        Course: Bachelor of Computer Science <br>
+                                        Period: 20 weeks <br>
+                                        
                                     </td>
                                     <td>
-                                        <a href="#" class="btn btn-success btn-lg active" role="button" aria-pressed="true">Accept</a>
-                                        <a href="#" class="btn btn-danger btn-lg active" role="button" aria-pressed="true">Decline</a>
+                                       Accepted
                                     </td>
                                   </tr>
-                                 
+                                  <tr>
+                                    <th scope="row">2</th>
+                                    <td>Jacob</td>
+                                    <td>Age: 21 <br>
+                                        University: UM <br>
+                                        Course: Bachelor of Computer Science <br>
+                                        Period: 20 weeks <br>
+                                        
+                                    </td>
+                                    <td>
+                                       Accepted
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">3</th>
+                                    <td>Larry</td>
+                                    <td>Age: 21 <br>
+                                        University: UM <br>
+                                        Course: Bachelor of Computer Science <br>
+                                        Period: 20 weeks <br>
+                                        
+                                    </td>
+                                    <td>
+                                       Accepted
+                                    </td>
+                                  </tr>
                                 </tbody>
                               </table>
-                              
                         </form>
                       
                     </div>
+                    <br><br>
+                    <a href="#" class="btn btn-danger btn-lg active" role="button" aria-pressed="true">Download PDF</a>
+
 						<!--end form-->
 						<div class="signin-content" ></div>
                     </div>

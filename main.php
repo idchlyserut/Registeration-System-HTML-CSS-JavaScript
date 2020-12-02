@@ -1,3 +1,10 @@
+<?php 
+
+include('session.php');
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,8 +43,8 @@
 
       <nav class="main-nav float-right d-none d-lg-block">
         <ul>
-          <li class="active"><a href="main.html">Submission Page</a></li>
-          <li><a href="info.html">Contact Us</a></li>
+          <li class="active"><a href="main.php">Submission Page</a></li>
+          <li><a href="Info.php">Contact Us</a></li>
           <li><a href="php/logout.php">Log Out</a></li>
      
         </ul>
@@ -80,6 +87,9 @@
 									</div>
 									
 										<div>
+										
+										
+										
 								      <input type="file" name="myfile" class="btn btn-danger btn-lg active" role="button" aria-pressed="true"multiple> </input>
 									  </div>
 									
