@@ -1,3 +1,26 @@
+<?php
+  session_start(); 
+
+  if (!isset($_SESSION['email'])) {
+    ?>
+    <script>
+      alert('Please login!');
+      window.location.href='index.php';
+    </script>
+    <?php
+  }
+  if (isset($_GET['logout'])) {
+  	session_destroy();
+  	unset($_SESSION['email']);
+  	header("location: index.php");
+  }
+
+  include('conn.php');
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,7 +67,7 @@
         <ul>
           <li ><a href="admin.php">Applicants List</a></li>
           <li class="active"><a href="result.php">Result List</a></li>
-          <li><a href="php/logout.php">Log Out</a></li>
+          <li><a href="main.php?logout='1'">Log Out</a></li>
      
         </ul>
       </nav>

@@ -1,15 +1,18 @@
 <?php
 // connect to the database
-$conn = mysqli_connect('localhost', 'root', '', 'systemDB');
+$link = mysqli_connect('localhost', 'root', '', 'systemDB');
 
 $sql = "SELECT * FROM files";
-$result = mysqli_query($conn, $sql);
+$result = mysqli_query($link, $sql);
 
 $files = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 
 // Uploads files
 if (isset($_POST['submit'])) { // if save button on the form is clicked
+
+      $email = mysqli_real_escape_string($link,$_POST['email']);
+      $name = mysqli_real_escape_string($link,$_POST['name']); 
     // name of the uploaded file
     $filename = $_FILES['myfile']['name'];
 	
@@ -31,8 +34,8 @@ if (isset($_POST['submit'])) { // if save button on the form is clicked
     } else {
         // move the uploaded (temporary) file to the specified destination
         if (move_uploaded_file($file, $destination)) {
-            $sql = "INSERT INTO files (name, size, downloads) VALUES ('$filename', $size, 0)";
-            if (mysqli_query($conn, $sql)) {
+            $sql = "INSERT INTO files (file, size, downloads, name, email) VALUES ('$filename', $size, 0, '$name', '$email')";
+            if (mysqli_query($link, $sql)) {
                 echo "File uploaded successfully";
             }
         } else {
@@ -47,7 +50,7 @@ if (isset($_GET['file_id'])) {
 
     // fetch file to download from database
     $sql = "SELECT * FROM files WHERE id=$id";
-    $result = mysqli_query($conn, $sql);
+    $result = mysqli_query($link, $sql);
 
     $file = mysqli_fetch_assoc($result);
     $filepath = 'uploads/' . $file['filename'];
@@ -65,7 +68,7 @@ if (isset($_GET['file_id'])) {
         // Now update downloads count
         $newCount = $file['downloads'] + 1;
         $updateQuery = "UPDATE files SET downloads=$newCount WHERE id=$id";
-        mysqli_query($conn, $updateQuery);
+        mysqli_query($link, $updateQuery);
         exit;
     }
 

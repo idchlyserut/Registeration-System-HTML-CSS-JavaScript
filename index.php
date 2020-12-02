@@ -1,4 +1,7 @@
 
+<?php
+include('server.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,14 +33,14 @@
 
                     <div class="signin-form">
                         <h2 class="form-title">Login</h2>
-                        <form method="POST" class="register-form" id="login-form" action="php/login.php">
+                        <form method="POST" class="register-form" id="login-form" action="index.php">
                             <div class="form-group">
                                 <label for="your_email"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                <input type="email" name="email"  placeholder="Email" required />
+                                <input type="email" name="email" id="email" placeholder="Email"/>
                             </div>
                             <div class="form-group">
                                 <label for="password"><i class="zmdi zmdi-lock"></i></label>
-                                <input type="password" name="password"  placeholder="Password" required />
+                                <input type="password" name="password" id="password" placeholder="Password"/>
                             </div>
                             <div class="form-group form-button">
                                 <input type="submit" name="submit" id="signin" class="form-submit" value="submit"/>

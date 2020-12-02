@@ -23,7 +23,12 @@
          
          header("location: ../admin.php");
       }else {
-         echo "Your Login Name or Password is invalid";
+          ?>
+    <script>
+      alert('Oops! something is incorrect. ');
+      window.location.href='../login_admin.php';
+    </script>
+    <?php
 		 
       }
    }

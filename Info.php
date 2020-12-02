@@ -44,7 +44,7 @@
         <ul>
             <li><a href="main.php">Submission Page</a></li>
             <li class="active"><a href="Info.php">Contact Us</a></li>
-            <li><a href="php/logout.php">Log Out</a></li>
+            <li><a href="main.php?logout='1'">Log Out</a></li>
      
         </ul>
       </nav>

@@ -12,14 +12,7 @@
    $login_session = $row['email'];
    
    if(!isset($_SESSION['login_user'])){
-	   
-       ?>
-	 <script>
-		alert('Please login');
-		window.location.href='index.php';
-	 </script>
-	 <?php
-	 
+      header("location:login.php");
       die();
    }
 ?>

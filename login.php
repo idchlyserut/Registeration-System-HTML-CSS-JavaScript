@@ -1,3 +1,4 @@
+
 <?php
 include('server.php');
 ?>
@@ -26,24 +27,25 @@ include('server.php');
                 <div class="signin-content">
                     <div class="signin-image">
 					 
-                        <figure><img src="images/character 13.svg" alt="sing up image"></figure>
+                        <figure><img src="images/character 7.svg" alt="sing up image"></figure>
                       
                     </div>
 
                     <div class="signin-form">
-                        <h2 class="form-title">Admin Login</h2>
-                        <form method="POST" class="register-form" id="login-form" action="php/login_admin.php">
+                        <h2 class="form-title">Login</h2>
+                        <form method="POST" class="register-form" id="login-form" action="login.php">
                             <div class="form-group">
                                 <label for="your_email"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                <input type="email" name="email" id="email" placeholder="Email" required />
+                                <input type="email" name="email" id="email" placeholder="Email"/>
                             </div>
                             <div class="form-group">
                                 <label for="password"><i class="zmdi zmdi-lock"></i></label>
-                                <input type="password" name="password" id="password" placeholder="Password" required />
+                                <input type="password" name="password" id="password" placeholder="Password"/>
                             </div>
-                            <div class="form-group form-button">
-                                <input type="submit" name="submit" id="signin" class="form-submit" value="submit"/>
-                            </div>
+                            <button type="submit" name="login_user" id="signin" class="form-submit" value="submit"></button>
+                            
+							 <a href="signup.html" class="signup-image-link">Create an account</a>
+							  <a href="login_admin.html" class="signup-image-link">Admin? click here.</a>
 							  
                         </form>
                     </div>

@@ -1,7 +1,23 @@
-<?php include 'php/filesLogic.php';?>
-<?php include 'php/userLogic.php';?>
-<?php session_start (); ?>
+<?php
+  session_start(); 
 
+  if (!isset($_SESSION['email'])) {
+    ?>
+    <script>
+      alert('Please login!');
+      window.location.href='login_admin.php';
+    </script>
+    <?php
+  }
+  if (isset($_GET['logout'])) {
+  	session_destroy();
+  	unset($_SESSION['email']);
+  	header("location:login_admin.php");
+  }
+
+  include('conn.php');
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -85,7 +101,7 @@
 						<br>
 						<!-- Form Section--->
 						
-                        <form method="POST"  class="register-form" id="login-form">
+                        <form method="POST" action="php/downloads.php" class="register-form" id="login-form">
                             <table class="table">
                                 <thead class="thead-dark">
                                   <tr>
@@ -98,15 +114,11 @@
                                 </thead>
                                 <tbody>
                                   <tr>
-                                      <?php foreach [($users as $user) && ($files as $file)] : ?>
-											<tr>
-											<td><?php echo $file['id']; ?></td>
-											<td><?php echo $user['name']; ?></td>
-											<td><?php echo $file['file']; ?></td>
-											<?php endforeach;?>
-											
-											<td><a href="admin.php?file_id=<?php echo $file['id'] ?>" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Download</a></td>
-                                     <!--   <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Download</a> -->
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>
+                                        <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Download</a>
                                     </td>
                                     <td>
                                         <a href="#" class="btn btn-success btn-lg active" role="button" aria-pressed="true">Accept</a>
