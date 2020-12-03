@@ -12,12 +12,16 @@
   if (isset($_GET['logout'])) {
   	session_destroy();
   	unset($_SESSION['email']);
-  	header("location:login_admin.php");
+  	header("location: login_admin.php");
   }
 
   include('conn.php');
 
 ?>
+
+<?php include "php/filesLogic.php" ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -64,7 +68,7 @@
         <ul>
           <li class="active"><a href="admin.php">Applicants List</a></li>
           <li><a href="result.php">Result List</a></li>
-            <li><a href="php/logout.php">Log Out</a></li>
+            <li><a href="main.php?logout='1'">Log Out</a></li>
      
         </ul>
       </nav>
@@ -101,24 +105,28 @@
 						<br>
 						<!-- Form Section--->
 						
-                        <form method="POST" action="php/downloads.php" class="register-form" id="login-form">
+                        <form method="POST" action="php/admin.php" class="register-form" id="login-form">
                             <table class="table">
                                 <thead class="thead-dark">
                                   <tr>
-                                    <th scope="col">ID</th>
-                                    <th scope="col">Name</th>
-                                    <th scope="col">Applicant Basic Info</th>
-                                    <th scope="col">Download Documents</th>
+                                    <th scope="col" style="width:20px">ID</th>
+                                    <th scope="col" style="width:150px" >Name</th>
+                                    <th scope="col" style="width:50px">Email</th>
+                                    <th scope="col">Documents</th>
                                     <th scope="col">Action</th>
                                   </tr>
                                 </thead>
                                 <tbody>
                                   <tr>
-                                    <th scope="row">1</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>
-                                        <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Download</a>
+                                      <?php foreach ($files as $file): ?>
+							
+										<td><?php echo $file['id']; ?></td>
+										<td><?php echo $file['name']; ?></td>
+										<td><?php echo $file['email']; ?></td>
+										<td><a href="downloads.php?file_id=<?php echo $file['id'] ?>">Download</a></td>
+										
+										<?php endforeach;?>
+                                       
                                     </td>
                                     <td>
                                         <a href="#" class="btn btn-success btn-lg active" role="button" aria-pressed="true">Accept</a>

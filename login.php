@@ -42,10 +42,12 @@ include('server.php');
                                 <label for="password"><i class="zmdi zmdi-lock"></i></label>
                                 <input type="password" name="password" id="password" placeholder="Password"/>
                             </div>
-                            <button type="submit" name="login_user" id="signin" class="form-submit" value="submit"></button>
+                            <div class="form-group form-button">
+                                <input type="submit" name="submit" id="signin" class="form-submit" value="submit"/>
+                            </div>
                             
-							 <a href="signup.html" class="signup-image-link">Create an account</a>
-							  <a href="login_admin.html" class="signup-image-link">Admin? click here.</a>
+							 <a href="signup.php" class="signup-image-link">Create an account</a>
+							  <a href="login_admin.php" class="signup-image-link">Admin? click here.</a>
 							  
                         </form>
                     </div>

@@ -5,21 +5,19 @@
     ?>
     <script>
       alert('Please login!');
-      window.location.href='index.php';
+      window.location.href='login_admin.php';
     </script>
     <?php
   }
   if (isset($_GET['logout'])) {
   	session_destroy();
   	unset($_SESSION['email']);
-  	header("location: index.php");
+  	header("location: login_admin.php");
   }
 
   include('conn.php');
 
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
