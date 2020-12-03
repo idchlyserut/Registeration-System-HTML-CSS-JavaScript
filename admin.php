@@ -123,7 +123,7 @@
 										<td><?php echo $file['id']; ?></td>
 										<td><?php echo $file['name']; ?></td>
 										<td><?php echo $file['email']; ?></td>
-										<td><a href="downloads.php?file_id=<?php echo $file['id'] ?>">Download</a></td>
+										<td><a href="admin.php?file_id=<?php echo $file['id'] ?>"  class="btn btn-primary btn-lg active" role="button" aria-pressed="true" >Download</a></td>
 										
 										<?php endforeach;?>
                                        
