@@ -44,7 +44,7 @@ include('a_server.php');
                             <div class="form-group form-button">
                                 <input type="submit" name="submit" id="signin" class="form-submit" value="submit"/>
                             </div>
-							  
+							    <a href="login.php" class="signup-image-link">Public user? click here.</a>
                         </form>
                     </div>
                 </div>
