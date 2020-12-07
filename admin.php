@@ -129,7 +129,7 @@
                                        
                                     </td>
                                     <td>
-                                        <a href="#" class="btn btn-success btn-lg active" role="button" aria-pressed="true">Accept</a>
+                                        <a href="sendmail/index.php"  name="email" class="btn btn-success btn-lg active" role="button" aria-pressed="true" >Accept</a>
                                         <a href="#" class="btn btn-danger btn-lg active" role="button" aria-pressed="true">Decline</a>
                                     </td>
                                   </tr>
