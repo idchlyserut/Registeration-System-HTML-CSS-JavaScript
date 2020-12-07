@@ -47,8 +47,8 @@ include('server.php');
                             </div>
                             
 							 <a href="signup.php" class="signup-image-link">Create an account</a>
-							  <a href="login_admin.php" class="signup-image-link">Admin? click here.</a>
-							  
+							  <a href="php/forgotpass.php" name="submit" type="submit" value="submit" class="signup-image-link">Forgot password?</a>
+							    <a href="login_admin.php" class="signup-image-link">Admin? click here.</a>
                         </form>
                     </div>
                 </div>
