@@ -5,60 +5,65 @@ include('server.php');
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.1.1">
+  
     <title>Welcome to InteRS</title>
+	<link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/sign-in/">
 
-    <!-- Font Icon -->
-    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+    <!-- Bootstrap core CSS -->
+	<link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Main css -->
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
 
-    <div class="main">
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
 
-
-        <!-- Sign in  Form -->
-        <section class="sign-in">
-            <div class="container">
-                <div class="signin-content">
-                    <div class="signin-image">
-					 
-                        <figure><img src="images/character 7.svg" alt="sing up image"></figure>
-                      
-                    </div>
-
-                    <div class="signin-form">
-                        <h2 class="form-title">Login</h2>
-                        <form method="POST" class="register-form" id="login-form" action="index.php">
-                            <div class="form-group">
-                                <label for="your_email"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                <input type="email" name="email" id="email" placeholder="Email"/>
-                            </div>
-                            <div class="form-group">
-                                <label for="password"><i class="zmdi zmdi-lock"></i></label>
-                                <input type="password" name="password" id="password" placeholder="Password"/>
-                            </div>
-                            <div class="form-group form-button">
-                                <input type="submit" name="submit" id="signin" class="form-submit" value="submit"/>
-                            </div>
-							 <a href="signup.php" class="signup-image-link">Create an account</a>
-							   <a href="php/forgotpass.php" class="signup-image-link">Forgot password?</a>
-							  <a href="login_admin.php" class="signup-image-link">Admin? click here.</a>
-							  
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </div>
-
-    <!-- JS -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="js/main.js"></script>
-</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="css/signin.css" rel="stylesheet">
+  </head>
+  <body class="text-center">
+    
+					<form class="form-signin" method="POST" id="login-form" action="index.php">
+					<img class="mb-4" src="img/logojpkn.png" alt="" width="150px" height="100px">
+					<h1 class="h3 mb-3 font-weight-normal">Sign in</h1>
+						
+							<label for="inputEmail" class="sr-only">Email address</label>
+							<input type="email" name="email" id="email" class="form-control" placeholder="Email address" required autofocus>
+							<label for="inputPassword" class="sr-only">Password</label>
+							<input type="password" name="password" id="password" class="form-control" placeholder="Password" required>
+					
+							<div class="checkbox mb-3">
+								<label>
+										<input type="checkbox" value="remember-me"> Remember me
+								</label>
+							</div>
+							
+							<button type="submit" name="submit" id="signin" class="btn btn-lg btn-primary btn-block" >Sign in</button><br>
+							
+							<a href="php/forgotpass.php" class="mt-5 mb-3 text-muted">Forgot password?</a> <br>
+							<a href="signup.php" class="mt-5 mb-3 text-muted">Create an account</a> <br>
+							<a href="login_admin.php" class="mt-5 mb-3 text-muted">Admin? click here.</a> <br>
+								
+							<p class="mt-5 mb-3 text-muted">&copy; 2020 Jabatan Perkhidmatan Komputer Negeri Sabah</p>
+				</form>
+		<!-- JS -->
+		<script src="vendor/jquery/jquery.min.js"></script>
+		<script src="js/main.js"></script>
+</body>
 </html>

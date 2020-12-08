@@ -6,64 +6,84 @@ include('server.php');
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Sign up</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.1.1">
+  
+    <title>Welcome to InteRS</title>
+	<link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/sign-in/">
 
-    <!-- Font Icon -->
-    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+    <!-- Bootstrap core CSS -->
+	<link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Main css -->
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
 
-    <div class="main">
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+    </style>
+   <!-- Custom styles for this template -->
+    <link href="css/signin.css" rel="stylesheet">
+  </head>
+  <body class="text-center">
         <!-- Sign up form -->
-        <section class="signup">
-            <div class="container">
-                <div class="signup-content">
-                    <div class="signup-form">
-                        <h2 class="form-title">Sign up</h2>
-                        <form method="POST" class="register-form" id="register-form" action="php/signup.php">
-                            <div class="form-group">
-                                <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                <input type="text" name="name" id="name" placeholder="Your Name" required />
+       	<form class="form-signin" method="POST" id="login-form" action="php/signup.php">
+					<img class="mb-4" src="img/logojpkn.png" alt="" width="150px" height="100px">
+					<h1 class="h3 mb-3 font-weight-normal">Sign up</h1>
+
+                      
+                            <div>
+                              
+                                <input type="text" name="name" id="name" class="form-control" placeholder="Your Name" required  autofocus />
                             </div>
-							  <div class="form-group">
-                                <label for="course"><i class="zmdi zmdi-book material-icons-name"></i></label>
-                                <input type="text" name="course" id="course" placeholder="Your Course" required />
+							  
+                                <input type="text" name="course" id="course" class="form-control" placeholder="Your Course" required />
                             </div>
-							 <div class="form-group">
-                                <label for="uni"><i class="zmdi zmdi-case material-icons-name"></i></label>
-                                <input type="text" name="uni" id="uni" placeholder="Which University" required />
+							 <div>
+                             
+                                <input type="text" name="uni" id="uni" class="form-control" placeholder="Which University" required />
                             </div>
-								 <div class="form-group">
-                                <label for="period"><i class="zmdi zmdi-calendar material-icons-name"></i></label>
-                                <input type="text" name="period" id="period" placeholder="Internship Period" required />
+								 <div>
+                                
+                                <input type="text" name="period" id="period" class="form-control" placeholder="Internship Period" required />
                             </div>
-                            <div class="form-group">
-                                <label for="email"><i class="zmdi zmdi-email  material-icons-name"></i></label>
-                                <input type="email" name="email" id="email" placeholder="Your Email" required />
+                            <div>
+                               
+                                <input type="email" name="email" class="form-control" id="email" placeholder="Your Email" required />
                             </div>
-                            <div class="form-group">
-                                <label for="pass"><i class="zmdi zmdi-lock material-icons-name"></i></label>
-                                <input type="password" name="password" id="pass" placeholder="Password" required />
+                            <div>
+                                
+                                <input type="password" name="password" class="form-control" id="pass" placeholder="Password" required />
                             </div>
                           
                             <div class="form-group">
-                                <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
-                                <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
+                                <div class="checkbox mb-3">
+								<label>
+										<input type="checkbox" value="tnc"> I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
                             </div>
+							
                             <div class="form-group form-button">
-                                <input type="submit" name="submit" id="signup" class="form-submit" value="Register"/>
+                                <input type="submit" name="submit" id="signup" class="btn btn-lg btn-primary btn-block"  value="Register"/>
                             </div>
+							 <a href="index.php" class="mt-5 mb-3 text-muted">I am already member</a>
                         </form>
                     </div>
                     <div class="signup-image">
-                        <figure><img src="images/character 16.svg" alt="sing up image"></figure>
-                        <a href="index.php" class="signup-image-link">I am already member</a>
+                     
+                       
                     </div>
                 </div>
             </div>
