@@ -97,7 +97,7 @@
 						<br>
 						<!-- Form Section--->
 						
-                        <form method="POST" action="php/admin.php" class="register-form" id="login-form">
+                        <form method="POST" action="admin.php" class="register-form" id="login-form">
                             <table class="table">
                                 <thead class="thead-dark">
                                   <tr>
@@ -121,7 +121,7 @@
 										</td>
 										<td><?php echo $file['name']; ?></td>
 										<td><?php echo $file['email']; ?></td>
-										<td><a href="admin.php?file_id=<?php echo $file['id'] ?>"  class="btn btn-primary btn-lg active" role="button" aria-pressed="true" >Download</a></td>
+										<td><a href="php/uploads/<?php echo $file['file'] ?>" target="_blank" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" >Download</a></td>
 										<td>
                                         <a href="sendmail/index.php"  name="email" class="btn btn-success btn-lg active" role="button" aria-pressed="true" >Accept</a>
                                         <a href="#" class="btn btn-danger btn-lg active" role="button" aria-pressed="true">Decline</a>
