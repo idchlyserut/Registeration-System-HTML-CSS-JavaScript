@@ -46,6 +46,7 @@ include('server.php');
                                 <input type="submit" name="submit" id="signin" class="form-submit" value="submit"/>
                             </div>
 							 <a href="signup.php" class="signup-image-link">Create an account</a>
+							   <a href="php/forgotpass.php" class="signup-image-link">Forgot password?</a>
 							  <a href="login_admin.php" class="signup-image-link">Admin? click here.</a>
 							  
                         </form>

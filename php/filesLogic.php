@@ -36,10 +36,20 @@ if (isset($_POST['submit'])) { // if save button on the form is clicked
         if (move_uploaded_file($file, $destination)) {
             $sql = "INSERT INTO files (file, size, downloads, name, email) VALUES ('$filename', $size, 0, '$name', '$email')";
             if (mysqli_query($link, $sql)) {
-                echo "File uploaded successfully";
-            }
-        } else {
-            echo "Failed to upload file.";
+                ?>
+				<script>
+				alert('File Successfully Uploaded!');
+				window.location.href='../main.php';
+				</script>
+				<?php
+							}
+            } else {
+               ?>
+				<script>
+				alert('Please try again!');
+				window.location.href='../main.php';
+				</script>
+				<?php
         }
     }
 }

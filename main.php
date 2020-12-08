@@ -135,7 +135,7 @@
 									
                                 <div class="form-group form-button">
 								            
-								          		<input type="file" name="myfile">
+								          		<input type="file" name="myfile" required>
 									</div>
 									</div>
 

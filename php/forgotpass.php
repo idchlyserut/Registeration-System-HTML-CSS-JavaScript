@@ -12,9 +12,8 @@ if(isset($_POST['submit']))
 	if($user_email==$email_id) {
 				$to = $email_id;
                 $subject = "Password";
-                $txt = "Your password is : $password.";
-                $headers = "From: password@studentstutorial.com" . "\r\n" .
-                "CC: somebodyelse@example.com";
+                $txt = "Hello! You have requested to retrieve your password for the JPKN internship account </br> Your password is : $password.";
+                $headers = "From: jpkn@no-reply.com";
                 mail($to,$subject,$txt,$headers);
 				?>
 				<script> 
@@ -24,7 +23,7 @@ if(isset($_POST['submit']))
 				<?php
 			}
 				else{
-					echo 'invalid userid';
+					echo 'invalid email';
 				}
 }
 ?>

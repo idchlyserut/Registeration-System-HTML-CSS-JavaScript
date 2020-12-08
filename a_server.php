@@ -7,6 +7,7 @@
       
       $myemail = mysqli_real_escape_string($link,$_POST['email']);
       $mypassword = mysqli_real_escape_string($link,$_POST['password']); 
+	  
       
       $sql = "SELECT * FROM admins WHERE email = '$myemail' and password = '$mypassword'";
       $result = mysqli_query($link,$sql);

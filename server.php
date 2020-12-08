@@ -7,6 +7,7 @@
       
       $myemail = mysqli_real_escape_string($link,$_POST['email']);
       $mypassword = mysqli_real_escape_string($link,$_POST['password']); 
+	   $mypassword = md5($mypassword);
       
       $sql = "SELECT * FROM users WHERE email = '$myemail' and password = '$mypassword'";
       $result = mysqli_query($link,$sql);

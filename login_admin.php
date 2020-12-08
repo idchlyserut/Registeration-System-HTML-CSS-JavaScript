@@ -32,7 +32,7 @@ include('a_server.php');
 
                     <div class="signin-form">
                         <h2 class="form-title">Admin Login</h2>
-                        <form method="POST" class="register-form" id="login-form" action="php/login_admin.php">
+                        <form method="POST" class="register-form" id="login-form" action="login_admin.php">
                             <div class="form-group">
                                 <label for="your_email"><i class="zmdi zmdi-account material-icons-name"></i></label>
                                 <input type="email" name="email" id="email" placeholder="Email" required />

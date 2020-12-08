@@ -51,16 +51,13 @@ include('server.php');
                                 <label for="pass"><i class="zmdi zmdi-lock material-icons-name"></i></label>
                                 <input type="password" name="password" id="pass" placeholder="Password" required />
                             </div>
-                            <div class="form-group">
-                                <label for="re-pass"><i class="zmdi zmdi-lock-outline material-icons-name"></i></label>
-                                <input type="password" name="re_pass" id="re_pass" placeholder="Repeat your password" required />
-                            </div>
+                          
                             <div class="form-group">
                                 <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
                                 <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
                             </div>
                             <div class="form-group form-button">
-                                <input type="submit" name="reg_user" id="signup" class="form-submit" value="Register"/>
+                                <input type="submit" name="submit" id="signup" class="form-submit" value="Register"/>
                             </div>
                         </form>
                     </div>

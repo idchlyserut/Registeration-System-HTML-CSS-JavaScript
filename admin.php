@@ -89,14 +89,6 @@
         <section class="sign-in">
             <div class="container">
 			  <h2 class="form-title">Applicants List</h2>
-               
-				
-				<!---image section
-                    <div class="signin-image">
-                        <figure><img src="images/character 13.svg" alt="main image"></figure>
-                       <a href="signup.html" class="signup-image-link">Create an account</a>
-                    </div>
-					image end-->
 
                     <div class="wrapping-background">
 						<!---header for form-->
@@ -109,7 +101,7 @@
                             <table class="table">
                                 <thead class="thead-dark">
                                   <tr>
-                                    <th scope="col" style="width:20px">ID</th>
+                                    <th scope="col" style="width:20px">Num</th>
                                     <th scope="col" style="width:150px" >Name</th>
                                     <th scope="col" style="width:50px">Email</th>
                                     <th scope="col">Documents</th>
@@ -117,22 +109,26 @@
                                   </tr>
                                 </thead>
                                 <tbody>
+								
                                   <tr>
                                       <?php foreach ($files as $file): ?>
-							
-										<td><?php echo $file['id']; ?></td>
+										<td><?php 
+									
+										 static $number = 0;
+												$number++;
+										echo $number  ?>
+										
+										</td>
 										<td><?php echo $file['name']; ?></td>
 										<td><?php echo $file['email']; ?></td>
 										<td><a href="admin.php?file_id=<?php echo $file['id'] ?>"  class="btn btn-primary btn-lg active" role="button" aria-pressed="true" >Download</a></td>
-										
-										<?php endforeach;?>
-                                       
-                                    </td>
-                                    <td>
+										<td>
                                         <a href="sendmail/index.php"  name="email" class="btn btn-success btn-lg active" role="button" aria-pressed="true" >Accept</a>
                                         <a href="#" class="btn btn-danger btn-lg active" role="button" aria-pressed="true">Decline</a>
-                                    </td>
-                                  </tr>
+										</td>
+										</tr>
+										
+										<?php endforeach;?>
                                  
                                 </tbody>
                               </table>
