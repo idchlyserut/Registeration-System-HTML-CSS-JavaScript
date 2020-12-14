@@ -13,16 +13,17 @@ if (!$conn){
 	die ("Connection failed: " . mysqli_connect_error());
 	}
 	
+$status_1="declined";
 
-$sql = "INSERT INTO admins (email, password)
-VALUES ('idcomel123@gmail.com', 'password123');";
+$sql = "INSERT INTO result (name, email, status)
+VALUES ('yo','yo@gmail.com', '$status_1');";
 
 
 
 
 
 if (mysqli_multi_query($conn,$sql)){
-	echo "New records created successfully";
+	echo "suda masuk";
 	}else {
 	echo "Error: " . $sql . "<br>" . mysqli_error ($conn);
 	}

@@ -18,6 +18,7 @@
   include('conn.php');
 
 ?>
+<?php include ('php/show_result.php') ?> 
 
 <!DOCTYPE html>
 <html lang="en">
@@ -87,13 +88,7 @@
             <div class="container">
 			  <h2 class="form-title">Applicants List</h2>
                
-				
-				<!---image section
-                    <div class="signin-image">
-                        <figure><img src="images/character 13.svg" alt="main image"></figure>
-                       <a href="signup.html" class="signup-image-link">Create an account</a>
-                    </div>
-					image end-->
+
 
                     <div class="wrapping-background">
 						<!---header for form-->
@@ -102,7 +97,7 @@
 						<br>
 						<!-- Form Section--->
 						
-                        <form method="POST" action="/action_page.php" class="register-form" id="login-form">
+                        <form method="POST"  id="content" action="result.php" class="register-form" id="login-form">
                             <table class="table">
                                 <thead class="thead-dark">
                                   <tr>
@@ -114,51 +109,27 @@
                                 </thead>
                                 <tbody>
                                   <tr>
-                                    <th scope="row">1</th>
-                                    <td>Mark</td>
-                                    <td>Age: 21 <br>
-                                        University: UM <br>
-                                        Course: Bachelor of Computer Science <br>
-                                        Period: 20 weeks <br>
-                                        
-                                    </td>
-                                    <td>
-                                       Accepted
-                                    </td>
+								   <?php foreach ($files as $file): ?>
+										<td><?php 
+									
+										 static $number = 0;
+												$number++;
+										echo $number  ?>
+										</td>
+										
+                                    <td><?php echo $file['name']; ?></td>
+                                    <td><?php echo $file['email']; ?> </td>
+                                    <td><?php echo $file['status']; ?></td>
                                   </tr>
-                                  <tr>
-                                    <th scope="row">2</th>
-                                    <td>Jacob</td>
-                                    <td>Age: 21 <br>
-                                        University: UM <br>
-                                        Course: Bachelor of Computer Science <br>
-                                        Period: 20 weeks <br>
-                                        
-                                    </td>
-                                    <td>
-                                       Accepted
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <th scope="row">3</th>
-                                    <td>Larry</td>
-                                    <td>Age: 21 <br>
-                                        University: UM <br>
-                                        Course: Bachelor of Computer Science <br>
-                                        Period: 20 weeks <br>
-                                        
-                                    </td>
-                                    <td>
-                                       Accepted
-                                    </td>
-                                  </tr>
-                                </tbody>
+								  <?php endforeach;?>
+                                 </tbody>
                               </table>
                         </form>
                       
                     </div>
                     <br><br>
-                    <a href="#" class="btn btn-danger btn-lg active" role="button" aria-pressed="true">Download PDF</a>
+					<div id="editor"></div>
+                    <a onclick="window.print()" class="btn btn-danger btn-lg active" id="cmd" role="button" aria-pressed="true">Print List</a>
 
 						<!--end form-->
 						<div class="signin-content" ></div>
@@ -174,9 +145,30 @@
     </section>
 	
 
+<script>
+
+var doc = new jsPDF();
+var specialElementHandlers = {
+    '#editor': function (element, renderer) {
+        return true;
+    }
+};
+
+$('#cmd').click(function () {
+    doc.fromHTML($('#content').html(), 15, 15, {
+        'width': 170,
+            'elementHandlers': specialElementHandlers
+    });
+    doc.save('sample-file.pdf');
+});
+
+</script>
+
 
   <!-- JavaScript Libraries -->
-
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.3/jspdf.min.js"></script>
+<script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
    <script src="vendor/jquery/jquery.min.js"></script>
     <script src="js/main.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

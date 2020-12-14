@@ -18,7 +18,6 @@ id int(11) unsigned NOT NULL AUTO_INCREMENT,
 name VARCHAR(300) NOT NULL,
 email VARCHAR(30) NOT NULL, 
 status VARCHAR (30) NOT NULL,
-document VARCHAR (300) NOT NULL,
 PRIMARY KEY (id),
 UNIQUE KEY email (email)
 )";

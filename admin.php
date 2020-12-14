@@ -97,7 +97,7 @@
 						<br>
 						<!-- Form Section--->
 						
-                        <form method="POST" action="admin.php" class="register-form" id="login-form">
+                        <form method="POST" action="php/status.php" class="register-form" id="login-form">
                             <table class="table">
                                 <thead class="thead-dark">
                                   <tr>
@@ -119,12 +119,12 @@
 										echo $number  ?>
 										
 										</td>
-										<td><?php echo $file['name']; ?></td>
-										<td><?php echo $file['email']; ?></td>
+										<td><input type="hidden" name="name" value="<?php echo $file['name']; ?>"/><?php echo $file['name']; ?></td>
+										<td><input type="hidden" name="email" value="<?php echo $file['email']; ?>"/><?php echo $file['email']; ?></td>
 										<td><a href="php/uploads/<?php echo $file['file'] ?>" target="_blank" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" >Download</a></td>
 										<td>
-                                        <a href="sendmail/index.php"  name="email" class="btn btn-success btn-lg active" role="button" aria-pressed="true" >Accept</a>
-                                        <a href="#" class="btn btn-danger btn-lg active" role="button" aria-pressed="true">Decline</a>
+                                        <button type="submit" name="accept">Accept</button>
+                                         <button type="submit" name="decline">Decline</button>
 										</td>
 										</tr>
 										
