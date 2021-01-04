@@ -121,10 +121,12 @@
 										</td>
 										<td><input type="hidden" name="name" value="<?php echo $file['name']; ?>"/><?php echo $file['name']; ?></td>
 										<td><input type="hidden" name="email" value="<?php echo $file['email']; ?>"/><?php echo $file['email']; ?></td>
+										<td><input type="hidden" name="id" value="<?php echo $file['id']; ?>"/><?php echo $file['id']; ?></td>
 										<td><a href="php/uploads/<?php echo $file['file'] ?>" target="_blank" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" >Download</a></td>
 										<td>
                                         <button type="submit" name="accept">Accept</button>
                                          <button type="submit" name="decline">Decline</button>
+										     <button type="submit" name="delete">X</button>
 										</td>
 										</tr>
 										

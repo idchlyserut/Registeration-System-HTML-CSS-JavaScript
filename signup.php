@@ -49,6 +49,7 @@ include('server.php');
                               
                                 <input type="text" name="name" id="name" class="form-control" placeholder="Your Name" required  autofocus />
                             </div>
+							<div>
 							  
                                 <input type="text" name="course" id="course" class="form-control" placeholder="Your Course" required />
                             </div>
@@ -58,7 +59,7 @@ include('server.php');
                             </div>
 								 <div>
                                 
-                                <input type="text" name="period" id="period" class="form-control" placeholder="Internship Period" required />
+                                <input type="number" min="20" name="period" id="period" class="form-control" placeholder="Internship Period (week)" required />
                             </div>
                             <div>
                                

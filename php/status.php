@@ -18,6 +18,7 @@ $conn = mysqli_connect ($servername, $username, $password, $dbname);
 		$myemail = mysqli_real_escape_string($conn,$_POST['email']); 
 		$name = mysqli_real_escape_string($conn,$_POST['name']);
 		
+		/*
 		//insert into table 'result' in database
 		$sql = "INSERT INTO result (name, email, status)
 			VALUES ('$name', '$myemail', '$status_1');";
@@ -36,14 +37,11 @@ $conn = mysqli_connect ($servername, $username, $password, $dbname);
 			window.location.href='../admin.php';
 			</script>
 			<?php
+			*/
 	}
-	else{
-		
-		
-		
-	}
+
 	
-		if(isset($_POST['decline']) )
+		else if(isset($_POST['decline']) )
 
 	{
 		$status_2="declined"; //status that will be inserted 
@@ -51,9 +49,10 @@ $conn = mysqli_connect ($servername, $username, $password, $dbname);
 		$name = mysqli_real_escape_string($conn,$_POST['name']);
 		
 		//insert into table 'result' in database
-		$sql = "INSERT INTO result (name, email, status)
-			VALUES ('$name', '$myemail', '$status_2');";
+		//$sql = "INSERT INTO result (name, email, status)
+		//	VALUES ('$name', '$myemail', '$status_2');";
 			
+			/*
 		//email for students
 		$to = $myemail;
         $subject = "JPKN Internship Application Status";
@@ -69,25 +68,22 @@ $conn = mysqli_connect ($servername, $username, $password, $dbname);
 			window.location.href='../admin.php';
 			</script>
 			<?php
+*/
+
 	}
-	else{
+	
+	else if(isset($_POST['delete']) )
+	
+	{
 		
-		?>
-			<script>
-			alert('Unsucessfully due to duplicated email!');
-			window.location.href='../admin.php';
-			</script>
-			<?php
+		$id = mysqli_real_escape_string($conn,$_POST['id']);
 		
+		//insert into table 'result' in database
+		$sql = "DELETE FROM files WHERE  id= $id ";
 	}
-
-
-
-
-
-if (mysqli_multi_query($conn,$sql)){
-	echo "Tarik bossssssss! suda masuk duitmu!";
-	}else {
-	echo "Error: " . $sql . "<br>" . mysqli_error ($conn);
-	}
-mysqli_close ($conn);
+		
+if (mysqli_query($conn, $sql)) {
+  echo "Record deleted successfully";
+} else {
+  echo "Error deleting record: " . mysqli_error($conn);
+}

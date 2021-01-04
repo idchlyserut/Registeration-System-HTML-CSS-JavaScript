@@ -37,7 +37,8 @@ if (isset($_POST['submit'])) {
     if ($user['email'] === $email) {
       array_push($errors, "email already exists");
     }
-  }
+
+}
 
   // Finally, register user if there are no errors in the form
   if (count($errors) == 0) {
