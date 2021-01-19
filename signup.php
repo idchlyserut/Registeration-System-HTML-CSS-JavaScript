@@ -12,7 +12,7 @@ include('server.php');
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v4.1.1">
   
-    <title>Welcome to InteRS</title>
+    <title>Daftar Sekarang</title>
 	<link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/sign-in/">
 
     <!-- Bootstrap core CSS -->
@@ -42,44 +42,41 @@ include('server.php');
         <!-- Sign up form -->
        	<form class="form-signin" method="POST" id="login-form" action="php/signup.php">
 					<img class="mb-4" src="img/logojpkn.png" alt="" width="150px" height="100px">
-					<h1 class="h3 mb-3 font-weight-normal">Sign up</h1>
+					<h1 class="h3 mb-3 font-weight-normal">Daftar Sekarang</h1>
 
                       
                             <div>
                               
-                                <input type="text" name="name" id="name" class="form-control" placeholder="Your Name" required  autofocus />
+                                <input type="text" name="name" id="name" class="form-control" placeholder="Nama Penuh" required  autofocus />
                             </div>
 							<div>
 							  
-                                <input type="text" name="course" id="course" class="form-control" placeholder="Your Course" required />
+                                <input type="text" name="course" id="course" class="form-control" placeholder="Kos Pengajian" required />
                             </div>
 							 <div>
                              
-                                <input type="text" name="uni" id="uni" class="form-control" placeholder="Which University" required />
+                                <input type="text" name="uni" id="uni" class="form-control" placeholder="Tempat Pengajian" required />
                             </div>
 								 <div>
                                 
-                                <input type="number" min="20" name="period" id="period" class="form-control" placeholder="Internship Period (week)" required />
+                                <input type="number" min="12" name="period" id="period" class="form-control" placeholder="Bilangan Minggu Praktikal" required />
                             </div>
                             <div>
                                
-                                <input type="email" name="email" class="form-control" id="email" placeholder="Your Email" required />
+                                <input type="email" name="email" class="form-control" id="email" placeholder="E-mel Anda" required />
                             </div>
                             <div>
                                 
-                                <input type="password" name="password" class="form-control" id="pass" placeholder="Password" required />
+                                <input type="password" name="password" class="form-control" id="pass" placeholder="Kata Laluan" required />
                             </div>
                           
                             <div class="form-group">
-                                <div class="checkbox mb-3">
-								<label>
-										<input type="checkbox" value="tnc"> I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
-                            </div>
-							
+                       
+							<a class="mt-5 mb-3 text-muted"> Dengan mengklik Daftar, anda bersetuju dengan <a href="#" class="term-service">Terma, Dasar Data dan Dasar Kuki kami. </a>
                             <div class="form-group form-button">
-                                <input type="submit" name="submit" id="signup" class="btn btn-lg btn-primary btn-block"  value="Register"/>
+                                <input type="submit" name="submit" id="signup" class="btn btn-lg btn-primary btn-block"  value="Daftar"/>
                             </div>
-							 <a href="index.php" class="mt-5 mb-3 text-muted">I am already member</a>
+							 <a href="index.php" class="mt-5 mb-3 text-muted">Kembali ke log masuk</a>
                         </form>
                     </div>
                     <div class="signup-image">

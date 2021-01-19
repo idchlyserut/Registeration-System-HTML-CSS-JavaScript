@@ -4,7 +4,7 @@
   if (!isset($_SESSION['email'])) {
     ?>
     <script>
-      alert('Please login!');
+      alert('Sila log masuk');
       window.location.href='index.php';
     </script>
     <?php
@@ -23,7 +23,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Internship Application</title>
+  <title>Internship Aplikasi </title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -83,7 +83,10 @@
         <!-- LI Application Form-->
         <section class="sign-in">
             <div class="container">
-			  <h2 class="form-title" style="padding-left:30%;">LI Application Form</h2>
+			<div class="form-title" style="padding-left:30%;">
+			  <h2>LI Application Form</h2>
+			  <p>Dokumen Pendaftaran Pelajar Latihan Industri</p>
+			  </div>
                 <div class="signin-content" >
                     <div class="signin-image">
                        
@@ -108,6 +111,8 @@
                                        <label for="course"><i class="zmdi zmdi-lock-outline"></i></label>
                                          <input type="text" name="email" id="course"  readonly   value="<?php echo $row['email']; ?>"/>
                                       </div>
+									  
+								
 							 <?php
 						  }
 						  

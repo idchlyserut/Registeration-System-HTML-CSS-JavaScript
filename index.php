@@ -41,24 +41,19 @@ include('server.php');
     
 					<form class="form-signin" method="POST" id="login-form" action="index.php">
 					<img class="mb-4" src="img/logojpkn.png" alt="" width="150px" height="100px">
-					<h1 class="h3 mb-3 font-weight-normal">Sign in</h1>
+					<h1 class="h3 mb-3 font-weight-normal">Log Masuk</h1>
 						
-							<label for="inputEmail" class="sr-only">Email address</label>
-							<input type="email" name="email" id="email" class="form-control" placeholder="Email address" required autofocus>
-							<label for="inputPassword" class="sr-only">Password</label>
-							<input type="password" name="password" id="password" class="form-control" placeholder="Password" required>
+							<label for="inputEmail" class="sr-only">E-mel</label>
+							<input type="email" name="email" id="email" class="form-control" placeholder="E-mel" required autofocus>
+							<label for="inputPassword" class="sr-only">Kata Laluan</label>
+							<input type="password" name="password" id="password" class="form-control" placeholder="Kata Laluan" required>
 					
-							<div class="checkbox mb-3">
-								<label>
-										<input type="checkbox" value="remember-me"> Remember me
-								</label>
-							</div>
 							
-							<button type="submit" name="submit" id="signin" class="btn btn-lg btn-primary btn-block" >Sign in</button><br>
+							<button type="submit" name="submit" id="signin" class="btn btn-lg btn-primary btn-block" >Log Masuk</button><br>
 							
-							<a href="php/forgotpass.php" class="mt-5 mb-3 text-muted">Forgot password?</a> <br>
-							<a href="signup.php" class="mt-5 mb-3 text-muted">Create an account</a> <br>
-							<a href="login_admin.php" class="mt-5 mb-3 text-muted">Admin? click here.</a> <br>
+							<a href="php/forgotpass.php" class="mt-5 mb-3 text-muted">Terlupa kata laluan?</a> <br>
+							<a href="signup.php" class="mt-5 mb-3 text-muted">Cipta akaun baru</a> <br>
+							<a href="login_admin.php" class="mt-5 mb-3 text-muted">Admin? klink sini.</a> <br>
 								
 							<p class="mt-5 mb-3 text-muted">&copy; 2020 Jabatan Perkhidmatan Komputer Negeri Sabah</p>
 				</form>
