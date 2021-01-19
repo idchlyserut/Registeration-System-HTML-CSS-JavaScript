@@ -61,9 +61,9 @@
 
       <nav class="main-nav float-right d-none d-lg-block">
         <ul>
-          <li class="active"><a href="main.php">Submission Page</a></li>
-          <li><a href="info.php">Contact Us</a></li>
-          <li><a href="main.php?logout='1'">Log Out</a></li>
+          <li class="active"><a href="main.php">Halaman Utama</a></li>
+          <li><a href="info.php">Hubungi Kami</a></li>
+          <li><a href="main.php?logout='1'">Log Keluar</a></li>
      
         </ul>
       </nav>
@@ -91,7 +91,7 @@
                     <div class="signin-image">
                        
 					        		<!---Form start-->
-                    <h5 class="wrapping-background"> Basic Information</h5>
+                    <h5 class="wrapping-background">Applicant Information<i><br>(Informasi Pemohon)</i> </h5>
                     <br>	
                           <form method="POST" class="register-form" id="register-form" action="php/filesLogic.php" enctype="multipart/form-data">
                           <div class="form-group">
@@ -125,18 +125,19 @@
 						      
 							
 									<!---header second form-->
-									<h5 class="wrapping-background"> Important Documents </h5>
+									 <h5 class="wrapping-background">Important Documents<i><br>(Dokumen-dokumen Penting)</i> </h5>
 										<br>
 					                <!-- second Form Section--->
 					                  <div class="wrapping-background">
                 
 								<div class="form-group"></div>
-									<p for="file">Please upload these files: </p><br>
-									<p><b> 1. Academic Application Letter</p><br>
-									<p>2. Resume</p><br>
-									<p>3. Latest Exam Transcript</p><br>
-								    <p>4. Acceptance Form by Faculty</p><br></b>
-									<p>Put documents in a folder and compress it into a .zip file </p> <br>
+									<p for="file">Please upload these files: </p>
+									<p for="file"> <i>Sila muat naik dokumen-dokumen tersenarai di bawah: </i> </p><br>
+									<p><b> 1. Academic Application Letter </b> <i>/ Surat Permohonan Akademik </i></p><br>
+									<p><b>2. Resume </b><i>/ Resume </i></p><br>
+									<p><b>3. Latest Exam Transcript </b><i>/ Slip Peperiksaan Terbaru </i></p><br>
+								    <p><b>4. Acceptance Form by Faculty</b> <i>/ Borang Penerimaan pelajar LI daripada fakulti</i></p><br>
+									<p><b>Put documents in a folder and compress it into a .zip file </b> <i>/ Sila letak dokumen-dokumen dalam fail .zip </i></p><br>
 									
                                 <div class="form-group form-button">
 								            
@@ -145,7 +146,7 @@
 									</div>
 
 									<div class="form-group form-button">
-									<input type="submit" name="submit" id="submit" class="form-submit" value="submit"/>
+									<input type="submit" name="submit" id="submit" class="form-submit" value="Hantar"/>
 								
 								</div>
 							</div>

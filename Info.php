@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Result</title>
+  <title>Contact Us</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -42,9 +42,9 @@
 
       <nav class="main-nav float-right d-none d-lg-block">
         <ul>
-            <li><a href="main.php">Submission Page</a></li>
-            <li class="active"><a href="Info.php">Contact Us</a></li>
-            <li><a href="main.php?logout='1'">Log Out</a></li>
+            <li><a href="main.php">Halaman Utama</a></li>
+          <li  class="active"><a href="info.php">Hubungi Kami</a></li>
+          <li><a href="main.php?logout='1'">Log Keluar</a></li>
      
         </ul>
       </nav>
@@ -63,7 +63,10 @@
         <!-- LI Application Form-->
         <section class="sign-in">
             <div class="container">
-              <h2 class="form-title" style="padding-left:35%;">Contact Us</h2>
+            <div class="form-title" style="padding-left:35%;">
+			  <h2>Contact Us</h2>
+			  <p style="padding-left:5.5%;"> Sila hubungi kami.</p>
+			  </div>
                 <div class="signin-content">
 				
 				<!---image section--->
@@ -76,14 +79,14 @@
                     <div class="signin-form">
 
 						<!---header for Info-->
-                        <h5 class="wrapping-background"> Contact Information </h5>
+                         <h5 class="wrapping-background">Contact Information<i><br>(Informasi maklumat)</i> </h5>
 						<br>
                         <!-- Info Section--->
     
 						<div class="wrapping-background">
                             <div class="form-group">
                             
-                                <h5>Address</h5>
+                                <h5>Address<i> / Alamat</i> </h5>
                                <p>Ibu Pejabat
                                 Jabatan Perkhidmatan Komputer Negeri
                                 Tngkt 6 & 7, Blok A
@@ -95,7 +98,7 @@
 							
                            </div>
                             <div class="form-group">
-                                <h5>Contact Us</h5>
+                                <h5>Contact Us<i> / Hubungi Kami</i> </h5>
 
                                <p>Tel : 088 - 368900</p> 
                                 <p>Faks : 088 - 215 116 </p>
