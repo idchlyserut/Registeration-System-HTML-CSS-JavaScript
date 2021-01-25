@@ -4,7 +4,7 @@
   if (!isset($_SESSION['email'])) {
     ?>
     <script>
-      alert('Please login!');
+      alert('Sila Log Masuk!');
       window.location.href='login_admin.php';
     </script>
     <?php
