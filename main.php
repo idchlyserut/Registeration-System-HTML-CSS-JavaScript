@@ -108,24 +108,24 @@
 
                
                                   <div class="form-group">
-                                       <label for="email"><i class="zmdi zmdi-lock-outline"></i></label>
+                                       <label for="email"><i class="zmdi zmdi-email"></i></label>
                                          <input type="text" name="email" id="email"  readonly   value="<?php echo $row['email']; ?>"/>
                                       </div>
 									  
 									  
 									  <div class="form-group">
-                                       <label for="course"><i class="zmdi zmdi-lock-outline"></i></label>
+                                       <label for="course"><i class="zmdi zmdi-assignment"></i></label>
                                          <input type="text" name="course" id="course"  readonly   value="<?php echo $row['course']; ?>"/>
                                       </div>
 									  
 									  
                                   <div class="form-group">
-                                       <label for="uni"><i class="zmdi zmdi-lock-outline"></i></label>
+                                       <label for="uni"><i class="zmdi zmdi-navigation"></i></label>
                                          <input type="text" name="uni" id="uni"  readonly   value="<?php echo $row['uni']; ?>"/>
                                       </div>
 									  
 									   <div class="form-group">
-                                       <label for="period"><i class="zmdi zmdi-lock-outline"></i></label>
+                                       <label for="period"><i class="zmdi zmdi-calendar-check"></i></label>
                                          <input type="text" name="period" id="period"  readonly   value="<?php echo $row['period']; ?>"/>
                                       </div>
 								
