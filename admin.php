@@ -66,9 +66,9 @@
 
       <nav class="main-nav float-right d-none d-lg-block">
         <ul>
-          <li class="active"><a href="admin.php">Applicants List</a></li>
-          <li><a href="result.php">Result List</a></li>
-            <li><a href="main.php?logout='1'">Log Out</a></li>
+          <li class="active"><a href="admin.php">Senarai Permohonan</a></li>
+          <li><a href="result.php">Senarai Keputusan</a></li>
+            <li><a href="main.php?logout='1'">Log Keluar</a></li>
      
         </ul>
       </nav>
@@ -88,7 +88,10 @@
         <!-- LI Application Form-->
         <section class="sign-in">
             <div class="container">
-			  <h2 class="form-title">Applicants List</h2>
+			 <div class="form-title" style="padding-left:33%;">
+			  <h2>Applicants List</h2>
+			  <p>Senarai Permohonan dari Pelajar LI</p>
+			  </div>
 
                     <div class="wrapping-background">
 						<!---header for form-->
@@ -101,7 +104,7 @@
                             <table class="table">
                                 <thead class="thead-dark">
                                   <tr>
-                                    <th scope="col" style="width:20px">Num</th>
+                                    <th scope="col" style="width:20px">No.</th>
                                     <th scope="col" style="width:150px" >Name</th>
                                     <th scope="col" style="width:50px">Email</th>
                                     <th scope="col">Documents</th>
