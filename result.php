@@ -19,6 +19,7 @@
 
 ?>
 <?php include ('php/show_result.php') ?> 
+<?php include ('php/status.php') ?> 
 
 <!DOCTYPE html>
 <html lang="en">
@@ -64,9 +65,9 @@
 
       <nav class="main-nav float-right d-none d-lg-block">
         <ul>
-          <li ><a href="admin.php">Applicants List</a></li>
-          <li class="active"><a href="result.php">Result List</a></li>
-          <li><a href="main.php?logout='1'">Log Out</a></li>
+           <li><a href="admin.php">Senarai Permohonan</a></li>
+          <li class="active"><a href="result.php">Senarai Keputusan</a></li>
+            <li><a href="main.php?logout='1'">Log Keluar</a></li>
      
         </ul>
       </nav>
@@ -102,9 +103,13 @@
                                 <thead class="thead-dark">
                                   <tr>
                                     <th scope="col">#</th>
-                                    <th scope="col">Name</th>
-                                    <th scope="col">Applicant Info</th>
+                                    <th scope="col">Nama</th>
+                                    <th scope="col" >E-mel</th>
+									 <th scope="col" >Tempat Pengajian</th>
+									 <th scope="col" >Tempoh LI</th>
+									 <th scope="col" >Kos</th>
                                     <th scope="col">Status</th>
+									<th scope="col">Tindakan</th>
                                   </tr>
                                 </thead>
                                 <tbody>
@@ -116,10 +121,17 @@
 												$number++;
 										echo $number  ?>
 										</td>
-										
+									<input type="hidden" name="id" value="<?php echo $file['id']; ?>"/>
                                     <td><?php echo $file['name']; ?></td>
                                     <td><?php echo $file['email']; ?> </td>
+									<td><?php echo $file['uni']; ?></td>
+									<td><?php echo $file['period']; ?></td>
+									<td><?php echo $file['course']; ?></td>
                                     <td><?php echo $file['status']; ?></td>
+									<td>
+
+										     <button type="submit" name="delete_result">X</button>
+											 </td>
                                   </tr>
 								  <?php endforeach;?>
                                  </tbody>

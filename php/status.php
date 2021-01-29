@@ -82,8 +82,34 @@ $conn = mysqli_connect ($servername, $username, $password, $dbname);
 		$sql = "DELETE FROM files WHERE  id= $id ";
 	}
 		
+			
+	else if(isset($_POST['delete_result']) )
+	
+	{
+		
+		$id = mysqli_real_escape_string($conn,$_POST['id']);
+		
+		//insert into table 'result' in database
+		$sql = "DELETE FROM result WHERE  id= $id ";
+		
+				?>
+			<script>
+			alert('Result column deleted');
+			window.location.href='result.php';
+			</script>
+			<?php
+	}
+	
+
 if (mysqli_query($conn, $sql)) {
-  echo "Record deleted successfully";
-} else {
-  echo "Error deleting record: " . mysqli_error($conn);
+	
+	echo "Changes are done successfully!";
+
+} else 
+
+{
+	
+  echo "Error change of record: " . mysqli_error($conn);
 }
+
+?>

@@ -95,20 +95,20 @@
 
                     <div class="wrapping-background">
 						<!---header for form-->
-                        <h3> Submitted Form</h3>
-                        <p>This is a table of submitted application for the internship position at JKPNS</p>
+                        <h4> Recieved Applicantions<i><br>(Permohonan Yang Telah Diterima)</i> </h4>
+                        <p>The table below are of the submitted application for the internship position at JKPNS<i> <br>/Jadual dibawah merupakan permohonan untuk posisi latihan industri di JPKNS</i> </p>
 						<br>
 						<!-- Form Section--->
-						
+					
                         <form method="POST" action="php/status.php" class="register-form" id="login-form">
                             <table class="table">
                                 <thead class="thead-dark">
                                   <tr>
-                                    <th scope="col" style="width:20px">No.</th>
-                                    <th scope="col" style="width:150px" >Name</th>
-                                    <th scope="col" style="width:50px">Email</th>
-                                    <th scope="col">Documents</th>
-                                    <th scope="col">Action</th>
+                                    <th scope="col" >#</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">E-mel</th>
+                                    <th scope="col">Dokumen</th>
+                                    <th scope="col" >Tindakan</th>
                                   </tr>
                                 </thead>
                                 <tbody>
@@ -122,9 +122,9 @@
 										echo $number  ?>
 										
 										</td>
+										<input type="hidden" name="id" value="<?php echo $file['id']; ?>"/>
 										<td><input type="hidden" name="name" value="<?php echo $file['name']; ?>"/><?php echo $file['name']; ?></td>
 										<td><input type="hidden" name="email" value="<?php echo $file['email']; ?>"/><?php echo $file['email']; ?></td>
-										<td><input type="hidden" name="id" value="<?php echo $file['id']; ?>"/><?php echo $file['id']; ?></td>
 										<td><a href="php/uploads/<?php echo $file['file'] ?>" target="_blank" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" >Download</a></td>
 										<td>
                                         <button type="submit" name="accept">Accept</button>
