@@ -14,9 +14,12 @@ $conn = mysqli_connect ($servername, $username, $password, $dbname);
 	if(isset($_POST['accept']) )
 
 	{
-		$status_1="accepted"; //status that will be inserted 
+		$status_1="diterima"; //status that will be inserted 
 		$myemail = mysqli_real_escape_string($conn,$_POST['email']); 
 		$name = mysqli_real_escape_string($conn,$_POST['name']);
+		$uni = mysqli_real_escape_string($conn,$_POST['uni']);
+		$period = mysqli_real_escape_string($conn,$_POST['period']);
+		$course = mysqli_real_escape_string($conn,$_POST['course']);
 		
 		/*
 		//insert into table 'result' in database
@@ -44,9 +47,12 @@ $conn = mysqli_connect ($servername, $username, $password, $dbname);
 		else if(isset($_POST['decline']) )
 
 	{
-		$status_2="declined"; //status that will be inserted 
+		$status_2="ditolak"; //status that will be inserted 
 		$myemail = mysqli_real_escape_string($conn,$_POST['email']); 
 		$name = mysqli_real_escape_string($conn,$_POST['name']);
+		$uni = mysqli_real_escape_string($conn,$_POST['uni']);
+		$period = mysqli_real_escape_string($conn,$_POST['period']);
+		$course = mysqli_real_escape_string($conn,$_POST['course']);
 		
 		//insert into table 'result' in database
 		//$sql = "INSERT INTO result (name, email, status)

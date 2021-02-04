@@ -130,8 +130,7 @@
                                     <td><?php echo $file['status']; ?></td>
 									<td>
 
-										     <button type="submit" name="delete_result">X</button>
-											 </td>
+							       <button type="submit" name="delete" class="btn btn-danger btn-sm " role="button" aria-pressed="true">Padam</button>
                                   </tr>
 								  <?php endforeach;?>
                                  </tbody>
@@ -141,7 +140,7 @@
                     </div>
                     <br><br>
 					<div id="editor"></div>
-                    <a onclick="window.print()" class="btn btn-danger btn-lg active" id="cmd" role="button" aria-pressed="true">Print List</a>
+                    <a onclick="window.print()" class="btn btn-danger btn-lg" id="cmd" role="button" aria-pressed="true">Print List</a>
 
 						<!--end form-->
 						<div class="signin-content" ></div>

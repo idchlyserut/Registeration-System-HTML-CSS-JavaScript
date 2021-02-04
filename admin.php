@@ -105,10 +105,10 @@
                                 <thead class="thead-dark">
                                   <tr>
                                     <th scope="col" >#</th>
-                                    <th scope="col">Name</th>
-                                    <th scope="col">E-mel</th>
-                                    <th scope="col">Dokumen</th>
-                                    <th scope="col" >Tindakan</th>
+                                    <th scope="col">Nama</th>
+                                    <th scope="col" >E-mel</th>
+                                    <th scope="col">Status</th>
+									<th scope="col">Tindakan</th>
                                   </tr>
                                 </thead>
                                 <tbody>
@@ -125,11 +125,14 @@
 										<input type="hidden" name="id" value="<?php echo $file['id']; ?>"/>
 										<td><input type="hidden" name="name" value="<?php echo $file['name']; ?>"/><?php echo $file['name']; ?></td>
 										<td><input type="hidden" name="email" value="<?php echo $file['email']; ?>"/><?php echo $file['email']; ?></td>
-										<td><a href="php/uploads/<?php echo $file['file'] ?>" target="_blank" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" >Download</a></td>
-										<td>
-                                        <button type="submit" name="accept">Accept</button>
-                                         <button type="submit" name="decline">Decline</button>
-										     <button type="submit" name="delete">X</button>
+										<td><input type="hidden" name="uni" value="<?php echo $file['uni']; ?>"/>
+										<td><input type="hidden" name="period" value="<?php echo $file['period']; ?>"/>
+										<td><input type="hidden" name="course" value="<?php echo $file['course']; ?>"/>
+										<td><a href="php/uploads/<?php echo $file['file'] ?>" target="_blank" class="btn btn-primary btn-sm active" role="button" aria-pressed="true" >Download</a></td>
+											<td>
+                                        <button type="submit" name="accept" class="btn btn-success btn-sm active" role="button" aria-pressed="true">Terima</button>
+                                         <button type="submit" name="decline" class="btn btn-warning btn-sm active" role="button" aria-pressed="true" >Tolak</button>
+										     <button type="submit" name="delete" class="btn btn-danger btn-sm active" role="button" aria-pressed="true" >Padam</button>
 										</td>
 										</tr>
 										
